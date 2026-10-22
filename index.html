@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fair Eight</title>
+<meta name="description" content="Fair Eight is a free block puzzle with no ads, checkable deals and a coach that reviews your moves.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FBF8F3; --surface: #FFFFFF; --fg: #241a2e; --muted: #6b5f75; --line: #e6dfee;
+  --accent: #5b3fa6; --accent-ink: #ffffff; --mint: #127a5f; --soft: #f1ecfa;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #150C28; --surface: #1f1438; --fg: #efe9f7; --muted: #a99cc0; --line: #33265a;
+    --accent: #7ef0c8; --accent-ink: #150C28; --mint: #7ef0c8; --soft: #241843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #150C28; --surface: #1f1438; --fg: #efe9f7; --muted: #a99cc0; --line: #33265a;
+  --accent: #7ef0c8; --accent-ink: #150C28; --mint: #7ef0c8; --soft: #241843;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px max(16px, env(safe-area-inset-left, 0px)) 48px; }
+header { display: flex; align-items: center; gap: 12px; }
+header img { width: 44px; height: 44px; border-radius: 11px; }
+header span { font: 700 22px/1 Fredoka, system-ui, sans-serif; }
+h1 { font: 700 clamp(34px, 7vw, 52px)/1.08 Fredoka, system-ui, sans-serif; margin: 40px 0 12px; }
+.lead { font-size: 19px; color: var(--muted); margin: 0 0 32px; max-width: 34em; }
+h2 { font: 700 26px/1.2 Fredoka, system-ui, sans-serif; margin: 48px 0 12px; }
+h3 { font-size: 18px; margin: 0 0 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+ol { padding-left: 22px; margin: 8px 0 0; }
+li { margin: 10px 0; }
+.btn { display: inline-block; margin-top: 8px; padding: 12px 18px; border-radius: 12px; font-weight: 700; text-decoration: none; background: var(--accent); color: var(--accent-ink); }
+.btn.off { background: var(--soft); color: var(--muted); pointer-events: none; }
+.note { font-size: 15px; color: var(--muted); }
+a { color: var(--mint); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="icon.png" alt=""><span>Fair Eight</span></header>
+
+  <h1>The block puzzle that plays fair.</h1>
+  <p class="lead">No ads. No tricks. Eight rows, eight columns, and pieces anyone can check.</p>
+
+  <div class="grid">
+    <div class="card"><h3>Checkable deals</h3><p>Every game has a replay code. Anyone can re-run it and see the exact same pieces.</p></div>
+    <div class="card"><h3>Move coach</h3><p>After each game, Coach grades every placement and shows the move that cost you.</p></div>
+    <div class="card"><h3>Daily puzzle</h3><p>Same pieces for everyone, one try a day. Compare scores with friends.</p></div>
+  </div>
+
+  <h2 id="beta">Join the beta</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Android</h3>
+      <ol>
+        <li>Join the tester group using the Google account on your Android phone.<br>
+          <a class="btn off" id="join-group" href="#beta">Opens soon</a></li>
+        <li>Opt in to the test on Google Play.<br>
+          <a class="btn off" id="opt-in" href="#beta">Opens soon</a></li>
+        <li>Install Fair Eight from Google Play and play.</li>
+      </ol>
+      <p class="note">Please stay in the test for at least 14 days. Google needs that before the game can launch for everyone.</p>
+    </div>
+    <div class="card">
+      <h3>iPhone</h3>
+      <p>A TestFlight beta is coming soon. Check back here, or watch for the link on the channel.</p>
+    </div>
+  </div>
+
+  <h2>Support</h2>
+  <p>Questions, bugs or ideas: <a href="mailto:faireightsupport@gmail.com">faireightsupport@gmail.com</a></p>
+  <p>Fair Eight has no ads and never will. If you'd like to support it: <a href="https://buymeacoffee.com/faireight">buymeacoffee.com/faireight</a></p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+    <span>Made by Creeven</span>
+  </footer>
+</div>
+</body>
+</html>
